@@ -4,10 +4,45 @@ GET http://localhost:3000/api/contacts
 POST http://localhost:3000/api/contacts
 
 ###
-DELETE http://localhost:3000/api/contacts
+DELETE http://localhost:3000/api/contact
 
 ###
 GET http://localhost:3000/api/contacts/:i
 
 ###
 GET http://localhost:3000/api/ctu
+
+###
+POST http://localhost:3000/api/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Khang Nguyen",
+    "email": "nguyenduykhang@example.com",
+    "address": "Vinh Long",
+    "phone": "056887281",
+    "favorite": "1"
+}
+
+### Find All Handle
+GET http://localhost:3000/api/contacts?name=Khang HTTP/1.1
+
+### Find One Handle
+GET http://localhost:3000/api/contacts/1
+
+### Update Handle
+PUT http://localhost:3000/api/contacts/1
+content-type: application/json
+
+{
+    "name": "Khang Nguyen",
+    "email": "nguyenduykhang@example.com",
+    "address": "Vinh Long",
+    "phone": "056887281"
+}
+
+###
+DELETE http://localhost:3000/api/contacts/5
+
+###
+GET http://localhost:3000/api/contact/favorite
